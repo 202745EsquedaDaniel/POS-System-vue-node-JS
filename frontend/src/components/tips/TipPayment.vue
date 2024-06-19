@@ -62,17 +62,19 @@ const editTotalTips = () => {
 
 <template>
   <div>
-    //header de la pagina
+    
     <tipsHeader />
-    //div que divide en 3 partes la pagina
+
     <div class="grid grid-cols-3 gap-8 px-12 font-bold max-w-screen-xl mx-auto">
-        //primera seccion
+       
       <div class="space-y-8">
         <div class="space-y-4">
           <p class="text-orangetext text-sm">Total de Propinas</p>
           <div class="flex items-center space-x-2">
             <span class="bg-orangebg text-3xl text-center px-4 py-2 rounded">${{ totalTips }}</span>
-            <button class="text-sm underline" @click="editTotalTips">Edit</button>
+            <button class="text-sm underline" @click="editTotalTips">
+                <img class=" w-8" src="../../assets/edit-3-svgrepo-com.svg" alt="">
+            </button>
           </div>
         </div>
         <div>
@@ -113,8 +115,11 @@ const editTotalTips = () => {
             </button>
           </div>
         </div>
-      </div>
+    </div>
+
+   
       <keypad @input="keypadInput = $event" />
+    
       <TipPaymentRecord @update-total-sum="updateTotalSum" />
     </div>
 
@@ -139,4 +144,10 @@ const editTotalTips = () => {
       </div>
     </div>
   </div>
+
+  <footer>
+    <div class=" w-screen bg-orangetext font-bold text-white flex justify-center mt-24">
+        <p > Made with ❤️ by Eduardo Daniel </p>
+    </div>
+  </footer>
 </template>

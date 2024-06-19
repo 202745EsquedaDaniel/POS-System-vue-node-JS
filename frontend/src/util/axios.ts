@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: "http://localhost:3000/Api/v1"
+    baseURL: "https://pos-system-vue-node-js-production.up.railway.app/Api/v1"
 })
 
 export default instance;
